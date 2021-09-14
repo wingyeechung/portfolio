@@ -1,0 +1,42 @@
+[
+  {
+    "goal": "Ik wil na afloop van mijn stage in staat zijn om mijn (project)voortgang te bewaken.",
+    "evidence": "stageplan, logboek, stagebegeleider up-to-date houden"
+  },
+  {
+    "goal": "Ik wil na afloop van mijn stage in staat zijn om een requirementsanalyse uit te voeren met verschillende belanghebbenden.",
+    "evidence": "Opgestelde requirements met akkoord van de belanghebbenden en e.v.t. verwerkte feedback"
+  },
+  {
+    "goal": "Ik wil na afloop van mijn stage in staat zijn om de functionaliteiten en ontwerp van verschillende reporting engines te analyseren.",
+    "evidence": "Rapport met daarin de onderzoeksresultaten van verschillende reporting engines"
+  },
+  {
+    "goal": "Ik wil na afloop van mijn stage in staat zijn om te adviseren over een selectie uit verschillende reporting engines opties",
+    "evidence": "Adviesrapport"
+  },
+  {
+    "goal": "Ik wil na afloop van mijn stage in staat zijn om een ontwerp op te stellen voor een reporting engine.",
+    "evidence": "Ontwerptechnieken zoals UML-diagrammen, AD, flowcharts en mock-up."
+  },
+  {
+    "goal": "Ik wil na afloop van mijn stage in staat zijn om een ontwerp op te stellen voor een database/datawarehouse",
+    "evidence": "ERD"
+  },
+  {
+    "goal": "Ik wil na afloop van mijn stage in staat zijn om een reporting engine te implementeren in een bestaand systeem met gebruik van bestaande frameworks (MVC/Blazor).",
+    "evidence": "Het tonen van code in relatie met ontwerp, design pattern en dat de documentatie goed verzorgd is, code snippets"
+  },
+  {
+    "goal": "Ik wil na afloop van mijn stage in staat zijn om een reporting engine te realiseren die voldoet aan de opgestelde requirements en met kwaliteitsstandaarden zoals ze gebruikt worden in software engineering of zoals ze gehanteerd worden binnen het bedrijf.",
+    "evidence": "Het tonen van code in relatie met ontwerp, design pattern en dat de documentatie goed verzorgd is, code snippets"
+  },
+  {
+    "goal": "Ik wil na afloop van mijn stage in staat zijn om in te werken en aan te passen aan het stagebedrijf betreft de werkwijze, regels en procedures.",
+    "evidence": "Screenshot van succesvol afgeronde informatiebeveiligingscursus, doornemen van informatiebeveiligingscursus + onboarding module. Naleven van regels en werkwijze tijdens mijn stage"
+  },
+  {
+    "goal": "Ik wil na afloop van mijn stage in staat zijn om werkzaamheden zelfstandig uit te voeren door taken op te stellen en deze op te pakken en feedback te vragen.",
+    "evidence": "Feedback van je begeleider/collega's (iFeedbackformulieren, opnames, gespreksverslagen, mailwisselingen, chatgesprekken, ed.)"
+  }
+]

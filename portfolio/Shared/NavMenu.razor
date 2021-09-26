@@ -1,37 +1,54 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">Wing Yee's Portfolio</a>
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</div>
+﻿@using Microsoft.AspNetCore.Components
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="stageplan">
-                <span class="oi oi-clipboard" aria-hidden="true"></span> Stageplan
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="bewijslast">
-                <span class="oi oi-briefcase" aria-hidden="true"></span> Bewijslast
-            </NavLink>
-        </li>
-    </ul>
-</div>
+<MatNavMenu>
+    <MatNavItem Href="" NavLinkMatch="NavLinkMatch.All" Style="@primary"><MatIcon Icon="home" Style="@primary"></MatIcon>&nbsp;Home&nbsp;</MatNavItem>
+    <MatNavItem Href="stageplan" NavLinkMatch="NavLinkMatch.Prefix" Style="@primary"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;Stageplan&nbsp;</MatNavItem>
+    <MatNavSubMenu>
+        <MatNavSubMenuHeader Style="@primary">
+            <MatNavItem AllowSelection="false" Style="@primary" @onclick="openFolderBewijslast"><MatIcon Icon="@folderBewijslast" Style="@primary"></MatIcon>&nbsp;Bewijslast&nbsp;</MatNavItem>
+        </MatNavSubMenuHeader>
+        <MatNavSubMenuList>
+            <MatNavItem Style="@primary" Href="/bewijslast/leerdoel1" NavLinkMatch="NavLinkMatch.Prefix"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;1. Manage &#38; Control</MatNavItem>
+            <MatNavItem Style="@primary" Href="/bewijslast/leerdoel2" NavLinkMatch="NavLinkMatch.Prefix"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;2. Analyseren</MatNavItem>
+            <MatNavItem Style="@primary" Href="/bewijslast/leerdoel3" NavLinkMatch="NavLinkMatch.Prefix"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;3. Analyseren</MatNavItem>
+            <MatNavItem Style="@primary" Href="/bewijslast/leerdoel4" NavLinkMatch="NavLinkMatch.Prefix"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;4. Adviseren</MatNavItem>
+            <MatNavItem Style="@primary" Href="/bewijslast/leerdoel5" NavLinkMatch="NavLinkMatch.Prefix"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;5. Ontwerpen</MatNavItem>
+            <MatNavItem Style="@primary" Href="/bewijslast/leerdoel6" NavLinkMatch="NavLinkMatch.Prefix"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;6. Ontwerpen</MatNavItem>
+            <MatNavItem Style="@primary" Href="/bewijslast/leerdoel7" NavLinkMatch="NavLinkMatch.Prefix"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;7. Realiseren</MatNavItem>
+            <MatNavItem Style="@primary" Href="/bewijslast/leerdoel8" NavLinkMatch="NavLinkMatch.Prefix"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;8. Realiseren</MatNavItem>
+            <MatNavItem Style="@primary" Href="/bewijslast/leerdoel9" NavLinkMatch="NavLinkMatch.Prefix"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;9. Prof. Skills</MatNavItem>
+            <MatNavItem Style="@primary" Href="/bewijslast/leerdoel10" NavLinkMatch="NavLinkMatch.Prefix"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;10. Prof. Skills</MatNavItem>
+        </MatNavSubMenuList>
+    </MatNavSubMenu>
+</MatNavMenu>
 
-@code {
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+@code{
+    public string folderStagePlan = "folder";
+    public string folderBewijslast = "folder";
+    public string primary = "color:white;";
+    public void openFolderStagePlan()
     {
-        collapseNavMenu = !collapseNavMenu;
+        if (folderStagePlan == "folder")
+        {
+            folderStagePlan = "folder_open";
+            folderBewijslast = "folder";
+        }
+        else
+        {
+            folderStagePlan = "folder";
+        }
     }
+    public void openFolderBewijslast()
+    {
+        if (folderBewijslast == "folder")
+        {
+            folderBewijslast = "folder_open";
+            folderStagePlan = "folder";
+        }
+        else
+        {
+            folderBewijslast = "folder";
+        }
+    }
+
 }

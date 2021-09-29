@@ -1,6 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Components
 
+
 <MatNavMenu>
+    <MatNavItem Style="@primary" AllowSelection="false">&nbsp;Wing Yee's Portfolio&nbsp;</MatNavItem>
     <MatNavItem Href="" NavLinkMatch="NavLinkMatch.All" Style="@primary"><MatIcon Icon="home" Style="@primary"></MatIcon>&nbsp;Home&nbsp;</MatNavItem>
     <MatNavItem Href="stageplan" NavLinkMatch="NavLinkMatch.Prefix" Style="@primary"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;Stageplan&nbsp;</MatNavItem>
     <MatNavSubMenu>
@@ -50,5 +52,4 @@
             folderBewijslast = "folder";
         }
     }
-
 }

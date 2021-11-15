@@ -2,7 +2,7 @@
 
 <div class="page">
     <MatAppBarContainer>
-        <MatAppBar Fixed="true" Style="background-color: #2C2B30">
+        <MatAppBar Fixed="true" style="background-color: #2C2B30">
             <MatAppBarRow>
                 <MatAppBarSection>
                     <MatButton OnClick="@((e) => ButtonClicked())"><MatIcon Icon="menu" Style="color: white"></MatIcon></MatButton>
@@ -16,19 +16,17 @@
                     </MatButtonLink>
                 </MatAppBarSection>
             </MatAppBarRow>
-        </MatAppBar>
-        <MatAppBarContent class="content px-4" style="background-color: #4F4F51">
             <MatDrawerContainer>
                 <MatDrawer @bind-Opened="@Opened" Mode="@MatDrawerMode.Modal" Style="background-color: #4F4F51">
                     <NavMenu />
                 </MatDrawer>
             </MatDrawerContainer>
-            @Body
-        </MatAppBarContent>
+        </MatAppBar>
     </MatAppBarContainer>
+    <MatAppBarContent Style="margin:2%;">
+        @Body
+    </MatAppBarContent>
 </div>
-
-
 
 @code
 {

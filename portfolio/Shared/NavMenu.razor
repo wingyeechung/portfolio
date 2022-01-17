@@ -3,6 +3,7 @@
 <MatNavMenu>
     <MatNavItem Href="" NavLinkMatch="NavLinkMatch.All" Style="@primary"><MatIcon Icon="home" Style="@primary"></MatIcon>&nbsp;Home&nbsp;</MatNavItem>
     <MatNavItem Href="stageplan" NavLinkMatch="NavLinkMatch.Prefix" Style="@primary"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;Stageplan&nbsp;</MatNavItem>
+    <MatNavItem Href="beoordelingsformulier" NavLinkMatch="NavLinkMatch.Prefix" Style="@primary"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;Adviesformulier&nbsp;</MatNavItem>
     <MatNavSubMenu Style="background-color: #4F4F51">
         <MatNavSubMenuHeader Style="@primary">
             <MatNavItem AllowSelection="false" Style="@primary" @onclick="openFolderBewijslast"><MatIcon Icon="@folderBewijslast" Style="@primary"></MatIcon>&nbsp;Bewijslast&nbsp;</MatNavItem>
@@ -20,6 +21,7 @@
             <MatNavItem Style="@primary" Href="bewijslast/leerdoel10" NavLinkMatch="NavLinkMatch.Prefix"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;10. Prof. Skills</MatNavItem>
         </MatNavSubMenuList>
     </MatNavSubMenu>
+    <MatNavItem Href="literatuurlijst" NavLinkMatch="NavLinkMatch.Prefix" Style="@primary"><MatIcon Icon="assignment" Style="@primary"></MatIcon>&nbsp;Literatuurlijst&nbsp;</MatNavItem>
 </MatNavMenu>        
 
 @code{

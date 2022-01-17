@@ -1,14 +1,173 @@
 ﻿@page "/bewijslast/leerdoel5"
 @inject HttpClient Http
 
-<h1>Leerdoel 4 - Ontwerpen</h1>
+<h1>Leerdoel 5 - Ontwerpen</h1>
 <p><i>Ik wil na afloop van mijn stage in staat zijn om een ontwerp op te stellen voor een rapportagetool.</i></p>
 
 <h3>Inleiding</h3>
-<h3>Bewijsmateriaal</h3>
-<h3>Feedback bedrijfsbegeleider</h3>
-<h3>Reflectie</h3>
+<p>
+    In de afgelopen twee jaren op de opleiding heb ik geleerd om bij het maken van een ontwerp voor een systeem verschillende UML-diagrammen zoals een Class- en Use Case Diagram te maken, maar om hier meer mee te oefenen heb ik besloten hier een leerdoel van te maken.
+    Naast het opstellen van UML-diagrammen die relevant zijn voor de rapportagetool, wil ik ook leren een mock-up te maken voor de interface van de rapportagetool met een designer tool die de UX en UI designers in het bedrijf gebruiken. 
+</p>
+<br />
 
-@code {
+<h5><b>Werkwijze</b></h5>
+<p>
+    In een van de overlegmomenten met mijn bedrijfsbegeleider heb ik gevraagd wat voor UML-diagrammen ik kan maken voor de rapportagetool.
+    Hierbij heb ik voorgesteld om naast een Use case diagram, ook een Activity- en Class diagram te maken.
+    Omdat de rapportagetool een black-box software is en er dus weinig kennis is over de back-end, is het maken van andere UML-diagrammen zoals een package, sequence en state diagram erg lastig of onmogelijk.
+    Daarom heb ik besloten om alleen een Use Case- en Activity diagram te maken voor de rapportagetool.
+    Mijn mede-stagiaire en ik hebben samen de Use Case Diagram opgesteld, maar apart een Use Case Description hiervoor geschreven (zie Bewijslast 1).
+    Daarnaast heb ik een Activity Diagram opgesteld (zie Bewijslast 2) en heeft mijn mede-stagiaire een Class Diagram ontworpen.
+    <br /><br />
+    Naast het maken van UML-diagrammen, heb ik een mock-up gemaakt voor de interface van de rapportagetool.
+    Allereerst heb ik, Hakan, de UI designer in het bedrijf uitgenodigd voor een meeting waarin hij mijn mede-stagiaire en mij heeft uitgelegd wat voor stappen er genomen moeten worden om een mock-up te kunnen maken voor de interface.
+    In deze meeting heeft hij me kort uitgelegd dat ze Figma gebruiken voor het ontwerpen van mock-ups en hoe ik deze programma kan gebruiken om zelf een mock-up te maken.
+    Met Figma heb ik toegang tot de UI component die gebruikt worden in het CRM-systeem van Ranshuijsen BV en kan ik dus een mock-up creëren met componenten die passen bij de stijl van het CRM-systeem.
+    Na de meeting heb ik geëxperimenteerd met het programma en een mock-up gemaakt voor de rapportagetool in het CRM (zie Bewijslast 3).
+</p>
+<br />
 
-}
+<h5><b>Bewijslast 1</b></h5>
+<p>
+    <i>
+        Hieronder zie je de Use Case Diagram die mijn mede-stagiaire en ik hebben gemaakt. 
+        Na het bespreken van de Use Case Diagram met mijn bedrijfsbegeleider, hebben mijn mede-stagiaire en ik als feedback gekregen om ook een aantal Use Case Descriptions te maken voor het diagram.
+        Alleen een Use Case Diagram verteld namelijk niet veel.
+    </i>
+    <div class="pdfviewer">
+        <embed src="pdf/UseCaseDiagram.pdf" style="height: 100vh; width: 90vw;"/>
+    </div>
+</p>
+<br />
+
+<h5>Bewijslast 2</h5>
+<p>
+    <i>
+        Hieronder zie je de Use Case Diagram die mijn mede-stagiaire en ik hebben gemaakt. 
+        Na het bespreken van de Use Case Diagram met mijn bedrijfsbegeleider, hebben mijn mede-stagiaire en ik als feedback gekregen om ook een aantal Use Case Descriptions te maken voor het diagram.
+        Alleen een Use Case Diagram verteld namelijk niet veel.
+    </i>
+    <div class="pdfviewer">
+        <embed src="pdf/ActivityDiagram.pdf" style="height: 100vh; width: 90vw;"/>
+    </div>
+</p>
+<br />
+
+<h5>Bewijslast 3</h5>
+<p>
+    <i>
+        Hieronder vind je de mock-up die ik heb gemaakt voor de interface.
+        Hier is een link naar de mock-up: <a href="https://www.figma.com/proto/5o81DrYnlW3fjBExg35HfJ/Untitled?page-id=0%3A1&node-id=2%3A2&viewport=241%2C48%2C0.97&scaling=min-zoom&starting-point-node-id=2%3A2&show-proto-sidebar=1">mock-up link</a>
+    </i>
+    <div>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 90vw; height: 100vh;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F5o81DrYnlW3fjBExg35HfJ%2FUntitled%3Fpage-id%3D0%253A1%26node-id%3D2%253A2%26viewport%3D241%252C48%252C0.97%26scaling%3Dmin-zoom%26starting-point-node-id%3D2%253A2" allowfullscreen></iframe>
+    </div>
+</p>
+<br />
+
+<h5><b>Feedback van designers</b></h5>
+<table class="table">
+    <thead style="background-color: #00005a; color: white;">
+        <tr>
+            <th style="width: 25%">Vincent</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>
+                Navigatie – ander icoon rapportage<br />
+                Kleur icoon prullenbak niet oranje maar rood<br />
+                Iconen stijl altijd hetzelfde houden<br /><br />
+                Tabjes beter laten lijnen<br />
+                Andere indeling van de tabellen, goed kijken welke informatie bij elkaar hoort, om de juiste conclusie te trekken welke ik nu wil openen<br />
+                Waar is de omschrijving die in de stap ‘maak rapport’ is ingevoerd<br />
+                Content in het design echter maken en niet met niets zeggende benamingen werken als ‘rapport 1’. Dit moet aansluiten op de belevingswereld van de persoon die dit moet beoordelen. Deze zal dan beter snapt wat er staat en de te komen discussie zal dan meer over de werking gaan, dan een discussie van wat er had moeten staan<br />
+                Niet te veel actie knoppen direct in tabel tonen, zorgt voor focus en overlaad de gebruiker niet met alle opties die ze zouden kunnen doen. Focus op de hoofdtaken<br />
+                Tabjes mijn rapporten en gedeeld met mij moet dat apart? Wat is de use cases daarvoor?<br />
+                Misschien is het handig om rapporten ook te koppelen aan product, project en klant<br />
+                De Scheduler zou ook opgenomen kunnen worden in de aanmaak flow van rapporten. Dat zorgt ervoor dat de gebruiker alles in 1 keer kan doen en niet door de hele applicatie moet klikken om bijpassende zaken in te stellen.<br />
+                Filters in scheduler<br />
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="table">
+    <thead style="background-color: #00005a; color: white;">
+        <tr>
+            <th style="width: 25%">Hakan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>
+               <ul>
+                    <li>Mooi overzichtstabel</li>
+                    <li>Aanmaken rapportage is makkelijk te gebruiken, goede flow dus</li>
+                    <li>Bij het aanmaken kan je een omschrijving invullen maar in het overzicht zie ik dit niet meer terug</li>
+                    <li>Auteur: wat als er meerdere gebruikers toegang hebben?</li>
+                    <li>Wat betekenen de versies. 1.1 2.1.2. etc, is niet duidelijk</li>
+                    <li>Draaitabel eerste scherm is onnodig denk ik. Want je kan later alsnog aanpassen., de filters kun je daar ook rechts doen btw.</li>
+                    <li>Scheduler leuk gedaan!
+                        <ul>
+                            <li>De agenda overzicht: de dagen lijken nu te veel op buttons</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p>
+                    <b>Algemeen:</b><br />
+                    Beide prototypes zijn goed opgesteld. Jullie hadden in korte tijd goed onder de knie hoe je met Figma schermen kunt ontwerpen en met een design system kunt werken.
+                    Snel opgepakt hoor! Hierdoor waren jullie in staat om gebruik te maken van onze library en dit toe te passen binnen jullie product.
+                    <br /><br />
+                    De tool zelf vind ik wel een beetje moeilijk maar daar is weinig aan te veranderen, en ik ben niet de doelgroep natuurlijk. Maar Rim etc wel.
+                    Wat ik heb gezien is dat jullie goed onderzoek hebben gedaan qua mogelijkheden en functionaliteit.
+                    Aan de hand van de eisen van de gebruikers de beste tool hiervoor uitgekozen en deze geïmplementeerd!
+                    <br /><br />
+                    Wat goed was om te zien is dat jullie hard gewerkt hebben ook.
+                    Bijvoorbeeld tijdens de lunch even doorwerken.
+                    Zeer goede doorzettingsvermogen.
+                </p>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<br />
+
+<h5><b>Feedback bedrijfsbegeleider</b></h5>
+<p>
+    <i>
+        "Zoals vaker gezegd is het gebruiken van de juiste analyse diagrammen soms lastig.
+        Een diagram moet waarde toevoegen aan het ontwerp.
+        Vaak is het “maken van de diagrammen” waardevoller dan de output (Het diagram) zelf.
+        Jullie hebben laten zien dat je begrijpt of en wanneer je specifieke diagrammen wel of niet kunt maken en die gaven inzicht in hoe het systeem zou moeten gaan werken."
+    </i>
+</p>
+<br />
+
+<h5><b>Reflectie</b></h5>
+<p>
+    Als feedback op mijn UML-diagrammen heb ik gekregen dat een diagram waarde moeten toevoegen aan het ontwerp en het gebruiken van de juiste diagrammen lastig kan zijn.
+    Wel heb ik laten zien dat ik begrijp wanneer ik welke diagrammen wel of niet kan maken en hoe deze inzicht gaven in hoe het systeem zou moeten gaan werken. 
+    <br /><br />
+    Tijdens de ontwerpfase heb ik geleerd om een Activity Diagram op te splitsen in meerdere Sub Activity Diagrams.
+    In het begin had ik tegen mijn bedrijfsbegeleider gezegd dat ik alleen een Activity Diagram wilde maken voor hoe een gebruiker een rapport kan maken, maar tijdens het ontwerpen van de Activity Diagram had ik nog andere activiteiten eraan toegevoegd zoals het exporteren van een rapport.
+    Hierdoor werd mijn Activity Diagram erg lang en waren de pijlen/benamingen van de activiteiten niet altijd even duidelijk en consistent.
+    Deze punten zal ik meenemen voor als ik in de toekomst opnieuw een Activity Diagram moet maken.
+    <br /><br />
+    In een meeting met mijn bedrijfsbegeleider heeft hij als feedback gegeven om Use Case Descriptions toe te voegen aan de Use Case Diagram, omdat een Use Case Diagram alleen niet veel voorstelt.
+    Mensen die de Use Case Diagram voor het eerst zien zullen namelijk niet begrijpen wat elk Use Case zou moeten betekenen.
+    Hiervoor heb ik dus voor een aantal Use Cases een Use Case Description opgesteld.
+    <br /><br />
+    Zoals in de feedback van mijn bedrijfsbegeleider staat is het “maken van de diagrammen” waardevoller dan de output (Het diagram) zelf.
+    Gedurende mijn stage heb ik kunnen oefenen met het maken van een Use Case- en Activity Diagram, maar deze ontwerpen niet volledig toegepast op het systeem zelf.
+    Wat ik de volgende keer anders wil doen is om naast het ontwerpen van andere UML-diagrammen die ik nog niet heb geleerd, om diagrammen leren toe te passen op het systeem.  
+    <br /><br />
+    Naast het ontwerpen van UML-Diagrams heb ik geleerd om met de designer tool Figma te werken.
+    Met deze tool kon ik gemakkelijk live met anderen een mock-up kan maken, een interactief prototype kan maken, eigen componenten creëren en plugins van andere gebruikers installeren.
+    In de toekomst zal ik zeker Figma aanraden en gebruiken bij het maken van een mock-up. Als feedback van de designers heb ik een aantal punten (zie Feedback van designers) op de mock-up gekregen zoals het voorkomen dat gebruikers overladen worden met te veel knoppen.
+    De gekregen feedback op de mock-up zal ik toepassen tijdens het implementeren van de rapportagetool. 
+    <br /><br />
+    Terugkijkend op het proces vind ik dat ik het leerdoel heb behaald, omdat ik heb geleerd om ontwerpen op te stellen van hoe de rapportagetool zou moeten werken.
+    Daarnaast heb ik geleerd om een ontwerp te maken van de interface van de rapportagetool met een nieuwe designer tool, Figma.
+</p>

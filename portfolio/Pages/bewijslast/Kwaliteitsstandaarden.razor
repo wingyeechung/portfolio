@@ -5,10 +5,152 @@
 <p><i>Ik wil na afloop van mijn stage in staat zijn om een rapportagetool te realiseren die voldoet aan de opgestelde requirements en met kwaliteitsstandaarden zoals ze gebruikt worden in software engineering of zoals ze gehanteerd worden binnen het bedrijf.</i></p>
 
 <h3>Inleiding</h3>
-<h3>Bewijsmateriaal</h3>
-<h3>Feedback bedrijfsbegeleider</h3>
-<h3>Reflectie</h3>
+<p>
+    In de afgelopen jaren op de opleiding heb ik altijd in projecten gewerkt die vanaf scratch zijn gebouwd en waarin de geschreven code niet altijd van kwaliteit was, omdat iedereen op een ander manier zijn code schreef.
+    Ik heb deze leerdoel opgesteld, omdat ik gedurende mijn stage wil leren om te programmeren in een omgeving waarin ik me aan de kwaliteitsstandaarden houd die het bedrijf hanteert.
+    Als bewijslast zal ik een code review houden met Paul in het bedrijf, omdat hij veel aan het CRM werkt en er dus veel van af weet.
 
-@code {
+    Naast het hanteren van de kwaliteitsstandaarden in het bedrijf, wil ik leren om een rapportagetool te implementeren die voldoet aan de opgesteld requirements.
+    Als bewijslast hiervoor zal ik verschillende gebruikers in het bedrijf vragen of zij de tool willen testen en de gekregen feedback als bewijslast inleveren.
+</p>
+<br />
 
-}
+<h5><b>Werkwijze</b></h5>
+<p>
+    In een meeting met mijn bedrijfsbegeleider en mede-stagiaire, heeft Rim verteld wat de eisen zijn voor de rapportagetool in het CRM.
+    Zo moeten we een rapportage framework maken waarbij de gebruiker zelf rapportages kan maken met de report designer, specifieke rapportages zoals een urenrapportage met de draaitabel en een scheduler om rapporten te delen als het mogelijk is.
+    Tijdens het implementeren van deze eisen, hebben we ook continu rekening gehouden met de andere opgestelde requirements die we hebben. 
+    <br /><br />
+    Wat betreft de kwaliteitsstandaarden in CRM is dit lastig te toetsen, omdat CRM een oud project is waar veel verschillende developers in hebben gewerkt en waar veel mee is geëxperimenteerd.
+    Hierdoor is het volgens Paul een vrij chaotisch project. Om me toch aan de kwaliteitsstandaarden in het bedrijf te houden, heb ik geanalyseerd hoe zij code hebben geschreven in Blazor, de nieuwe omgeving waar CRM in wordt ontwikkeld.
+    Zo heb ik onder andere ontdekt dat het ophalen van data in de Repository gebeurt en modellen gebruikt worden waarin data wordt geprepareerd zoals je het nodig hebt.
+    <br /><br />
+    Om te testen of de geïmplementeerde tool aan de kwaliteitsstandaarden voldoet, heb ik Paul gevraagd om een code review te doen.
+    Hierbij zijn we de rapportage framework en draaitabel variant afgegaan en hier functionaliteit en de daarbij behorende geschreven code gereviewd. 
+    In Feedback Paul zie je de feedback die ik van hem heb gekregen.
+    <br /><br />
+    Bij het implementeren van de rapportagetool is helaas gebleken dat de tool niet volledig aan alle requirements voldoet.
+    Zo kan er geen relatie tussen data gelegd worden met behulp van visuele elementen als de gebruiker geen SQL-datasource gebruikt (zie Bewijslast 3).
+    Omdat we voor de data containers een object-datasource gebruiken is het hierdoor niet mogelijk om gebruik te maken van de functie om een relatie te leggen met behulp van visuele elementen.
+    Doordat er geen relatie gelegd kan worden tussen de data containers is het moeilijk om gebruik te maken van de draaitabel en het groeperen van de data als de data niet in een platte lijst zit, omdat de draaitabel alleen een platte lijst accepteert (zie Bewijslast 3) 
+    <br /><br />
+    Als oplossing hiervoor heeft mijn mede-stagiaire de draaitabel component van DevExpress geïmplementeerd om alsnog een draaitabel te kunnen genereren met data uit verschillende lijsten.
+    Dankzij deze component kunnen gebruikers ook de drill-down en drill-through functionaliteiten in de draaitabel gebruiken, omdat de draaitabel in de rapportage designer static is. 
+    <br /><br />
+    Op het moment van schrijven is gebleken dat er te weinig tijd is om iedereen in het bedrijf nog te vragen of zij dit kunnen testen.
+    Het implementeren van de data containers in de tool en de draaitabel variant was erg ingewikkeld en dit vergde veel tijd waardoor de tool nog niet getest kon worden.
+    De tool zal getest worden in week 8 en dus kunnen de resultaten hiervan niet in mijn portfolio geplaatst kunnen worden. In Feedback Hakan zie je de feedbackpunten die we van Hakan, de UI designer, hebben gekregen op hoe hij de tool heeft ervaren.
+</p>
+<br />
+
+<h5><b>Bewijslast 1</b></h5>
+<p>
+    <h6>Feedback Paul na code review</h6>
+    <i>
+        "CRM is een oud project die gedurende jaren veel verschillende developers heeft gehad en waarmee veel is ge-experimenteert.
+        Hierdoor is het een vrij chaotisch project met veel verschillende ideeën en frameworks. Desondanks is er goed gekeken naar de recente code van de delen die gemigreerd zijn en is er correct voortborduurt op de nieuwe standaard.
+        Dit houdt onder andere in dat de Repository standaard is gebruikt, Grotendeels juiste benamingen zijn gehanteerd, structuren zijn aangehouden zoals ze bedoeld zijn en Blazor componenten herbruikt kunnen worden.
+        De standaard Microsoft notatie van C# wat wij bij Ranshuijsen hanteren is grotendeels opgevolgd."
+    </i>
+</p>
+<br />
+
+<h5><b>Bewijslast 2</b></h5>
+<p>
+    <h6>Feedback hakan na het testen van de rapportagetool</h6>
+    <table class="table">
+        <thead style="background-color: #00005a; color: white;">
+            <tr>
+                <th style="width: 25%">Rapport overview</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>
+                    <ul>
+                        <li>Rapport aanmaken is gemakkelijk</li>
+                        <li>In het begin was het wel even wennen/verwarrend, maar daarna kreeg je al snel door hoe de rapportagetool werkt.</li>
+                        <li>De knoppen op de rapport overview pagina zijn duidelijk te begrijpen (je weet waar ze voor dienen)</li>
+                    </ul>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table">
+        <thead style="background-color: #00005a; color: white;">
+            <tr>
+                <th style="width: 25%">Rapport draaitabel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>
+                    <ul>
+                        <li>Draaitabel is wel echt ziek (cool)</li>
+                        <li>Kruisje voor de popup scherm, zodat je de nieuwe wijzingen niet zal toepassenn</li>
+                        <li>Niet voor alle kolommen een (not set, month, quarter en year) selectbox laten zien. (Alleen voor datetime kolommen)</li>
+                        <li>Meer ruimte tussen de onderdelen (meer white space)</li>
+                        <li>Default tijd filter kan beter de afgelopen 6 maanden zijn ipv. Vandaag</li>
+                        <li>Ipv “Draaitabel wizard” beter “Draaitabel aanmaken”/”Draaitabel wijzigen” of alleen “Draaitabel aanmaken”</li>
+                        <li>Scrollbar voor draaitabel zelf ipv. Voor de pagina zodat je de filter en knoppen nog kan zien</li>
+                        <li>Eventueel rij mee laten gaan met scroll-event, zodat je niet helemaal terug hoeft te scrollen om te zien wat er in de rijen stond</li>
+                        <li>Optie voor aantal rijen per pagina onder paginering te stoppen ipv. In popup window</li>
+                        <li>Maand in letters ipv. Als cijfer. (Bijv. Juni – 2022)</li>
+                        <li>Knop ergens zodat je een uitleg krijgt te zien van hoe de draaitabel werkt</li>
+                        <li>Legenda van de grafiek aan de zijkant ipv. Aan de onderkant</li>
+                    </ul>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</p>
+<br />
+
+<h5><b>Bewijslast 3</b></h5>
+<p>
+    <i>
+        Hieronder heb ik het antwoord gekregen van DevExpress op de volgende vraag: Hoe kan ik een relatie vastleggen tussen de data in een object-datasource?
+    </i>
+    <div>
+        <img src="images/DevExpressDataSourceReply.png" style="max-width: 80vw; height:auto;" />
+    </div>
+    <p>
+        Hieronder heb ik het antwoord gekregen van DevExpress op de vraag of een draaitabel data accepteert van twee verschillende types.
+    </p>
+    <div>
+        <img src="images/DevExpressCrossTabReply.png" style="max-width: 80vw; height:auto;" />
+    </div>
+</p>
+<br />
+
+<h5><b>Feedback bedrijfsbegeleider</b></h5>
+<p>
+    <i>
+    "Nog steeds ben ik onder de indruk van wat jullie in deze korte tijd hebben neergezet.
+    Top dat we een product hebben gekregen wat ook daadwerkelijk doet wat ervan verwacht wordt.
+    Dat het nog niet helemaal af is doet daar niets aan af!
+    Van wat ik tot nu toe gezien heb gaan we hier veel gebruik van maken en dat is tenslotte het ultieme doel van softwareontwikkeling.
+    Wat betreft de standaarden is dat in het geval van CRM lastiger te toetsen, maar mijn gevoel zegt dat dit prima op orde is."
+    </i>
+</p>
+<br />
+
+<h5><b>Reflectie</b></h5>
+<p>
+    Als feedback van mijn bedrijfsbegeleider heb ik gekregen dat hij onder de indruk is van wat mijn mede-stagiaire en ik in een korte tijd hebben kunnen neerzetten.
+    De planning van wanneer we de rapportagetool moesten implementeren was deels uitgelopen, omdat het maken van de POC, het opstellen van een adviesrapport en het maken van ontwerpen voor de tool meer tijd vergden dan we hadden verwacht.
+    Hierdoor hadden we nog maar 6 weken om de tool te implementeren waardoor het nog niet helemaal af is. Ondanks dat het product nog niet helemaal af is, heeft het bedrijf een product heeft gekregen wat doet wat ervan verwacht wordt en zullen ze hier veel gebruik van gaan maken. 
+    <br /><br />
+    Doordat we later zijn begonnen met het implementeren van tool, is de planning van wanneer het testen zou beginnen uitgelopen.
+    Vanwege de bewijslast dat ik moet opleveren zijn we eerder begonnen met testen, hiervoor heb ik enkele collega’s gevraagd of ze de tool konden testen op de requirements die al geïmplementeerd zijn.
+    Helaas hadden zij het erg druk om in zo’n korte tijd de tool te testen. Daarom hebben we Hakan, de UI designer, gevraagd of hij tool kan testen.
+    Hij had namelijk de hele dag de tijd om de tool te testen en heeft daarnaast niet eerder met een rapportagetool gewerkt.
+    Door hem de tool te laten testen weten we wat een gebruiker, die nieuw is met rapportages, van de rapportage framework en draaitabel vindt.
+    <br /><br />
+    Wat ik voor de volgende keer anders zou doen is om een week van tevoren al testers uit te nodigen of ze het product kunnen testen.
+    Als ik in een korte tijd aan een collega vraag of hij/zij tijd heeft om een product te testen zal het hoogstwaarschijnlijk niet meteen een ja zijn, omdat zij ook andere dingen te doen hebben. 
+    <br /><br />
+    In de feedback van mijn bedrijfsbegeleider staat dat de kwaliteitsstandaarden in CRM lastiger te toetsen zijn.
+    Voor de kwaliteitsstandaarden hadden we besproken om een code review te houden en hiervoor heb ik Paul gevraagd of aan het einde van week 17 in de planning een code review met ons kan houden.
+    Na de code review heb ik de volgende feedback van hem gekregen (zie Bewijslast 1). 
+</p>

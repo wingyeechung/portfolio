@@ -5,10 +5,88 @@
 <p><i>Ik wil na afloop van mijn stage in staat zijn om een rapportagetool te implementeren in een bestaand systeem met gebruik van bestaande frameworks (MVC/Blazor).</i></p>
 
 <h3>Inleiding</h3>
-<h3>Bewijsmateriaal</h3>
-<h3>Feedback bedrijfsbegeleider</h3>
-<h3>Reflectie</h3>
+<p>
+    In de afgelopen jaren zijn de projecten waar ik aan heb gewerkt vanaf scratch gebouwd. 
+    In de toekomst wanneer ik bij een softwarebedrijf ga werken is de kans groot dat ik veel zal werken aan bestaande projecten. 
+    Gedurende mijn stage wil ik dus leren om een rapportagetool te implementeren in een bestaand systeem met gebruik van een bestaande framework.
+</p>
+<br />
 
-@code {
+<h5><b>Werkwijze</b></h5>
+<p>
+    Mijn collega’s en bedrijfsbegeleider hebben mij uitgelegd dat het CRM deels in MVC en Blazor is gebouwd.
+    Dit komt doordat het CRM op het moment van MVC, de oude omgeving, naar Blazor, de nieuwe omgeving, wordt ontwikkeld.
+    Omdat de CRM op het moment van MVC naar Blazor wordt ontwikkeld, zal de rapportagetool in de nieuwe omgeving worden geïmplementeerd.
+    <br /><br />
+    Voordat ik aan het implementeren van de rapportagetool ben begonnen, heb ik van tevoren al geëxperimenteerd met Blazor door de website van mijn portfolio op te zetten met een Blazor project.
+    Daarnaast zijn de POC’s die ik heb gemaakt van de onderzochte rapportagetools, gemaakt met Blazor of MVC als het niet mogelijk was om het in Blazor te maken.
+    Wat ik persoonlijk geweldig vind aan Blazor is dat je C# kan schrijven i.p.v. JavaScript, wat ik normaal gesproken gebruik, om interactieve websites te maken.
+    Daarnaast is het mogelijk om alsnog JavaScript code aan te roepen vanuit de C# code (Microsoft, zd). 
+    <br /><br />
+    Bij het implementeren van de rapportagetool in het CRM heb ik allereerst geanalyseerd hoe hun structuur eruitziet.
+    Door na te gaan hoe zij een bepaalde pagina hebben gebouwd en de functionaliteiten hebben geïmplementeerd, kon ik al snel een eigen pagina maken voor de rapportage framework.
+    Blazor is component-based. Dit betekent dat websites gebouwd kunnen worden met losse herbruikbare componenten.
+    Dankzij de componenten die andere developers van Ranshuijsen BV gemaakt hebben, hoef ik niet zelf de lay-out van een pagina te maken en kon ik bijvoorbeeld al vrij makkelijk een pagina maken met een overzicht van gemaakte rapporten.
+</p>
+<br />
 
-}
+<h5><b>Bewijslast 1</b></h5>
+<p>
+    <i>
+    Hieronder zie je een aantal pagina's die ik heb gemaakt met behulp van de shared componenten in het CRM.
+    In de RapportageOverview heeft mede-stagiaire extra filters, sorteer opties en subheaders toegevoegd en een avatar icon voor auteurs.
+    </i>
+    <div>
+        <img src="images/RapportageOverview.png" style="max-width: 80vw; height:auto;" />
+    </div>
+   Hieronder zie je de wizard (UI) die ik voor de draaitabel heb gemaakt. Voor de wizard heb ik een nieuw component gemaakt.
+    <div>
+        <img src="images/DraaitabelWizard.png" style="max-width: 80vw; height:auto;" />
+    </div>
+    Hieronder zie je een overzicht van de datacontainers.
+    Voor deze permissies en containers pagina heb ik de layout gemaakt en eventcallbacks toegevoegd om data te selecteren.
+    <div>
+        <img src="images/SelectContainers.png" style="max-width: 80vw; height:auto;" />
+    </div>
+</p>
+<br />
+
+<h5><b>Bewijslast 2</b></h5>
+<p>
+    <h6><b>Feedback Paul</b></h6>
+    <i>
+    Het CRM-project wordt binnen Ranshuijsen vaak gebruikt als experimenteer/leer project.
+    Om die reden zitten er veel verschillende soorten ideeën en technieken in en is de algehele kwaliteit van de code-base op sommige plekken redelijk laag. 
+    Met de nieuwe migratie naar .NET 6 is er meer structuur en deze is over het algemeen goed opgevolgd.  
+    Er is goed gekeken hoe bestaande schermen werken en de bestaande Blazor componenten zijn correct toegepast op de nieuwe onderdelen die gemaakt zijn door Wing Yee.   
+    Migraties op de database zijn volgens onze standaarden toegepast, en het ophalen van data via Repositories zoals de rest van de applicatie. 
+    Potentiële verbeteringen zitten vooral in het UX en UI gedeelte; hier zou er misschien meer naar bestaande nieuwe schermen gekeken kunnen worden. Hiernaast is het gebruik niet gelijk duidelijk.
+    </i>
+</p>
+<br />
+
+<h5><b>Feedback bedrijfsbegeleider</b></h5>
+<p>
+    <i>
+        Zoals bij de vorige leerdoelen al aangegeven heeft je doorzettingsvermogen en capaciteit om snel nieuwe technieken te leren eraan bijgedragen dat er een volwaardig product is ontwikkeld in de bestaande frameworks.
+    </i>
+</p>
+<br />
+
+<h5><b>Reflectie</b></h5>
+<p>
+    Als feedback van Paul heb ik gekregen dat er goed is gekeken naar hoe de andere schermen werken, dat ik de bestaande Blazor componenten goed heb toegepast op de nieuwe onderdelen die door mij gemaakt zijn.
+    Potentiële verbeteringen zitten bij mij vooral in het UX en UI gedeelte.
+    <br /><br />
+    Van deze feedback heb ik geleerd dat niet alleen belangrijk is om de back-end van een systeem te analyseren, maar ook het front-end.
+    De manier waarmee ik mijn front-end in elkaar heb gezet is eigenlijk een oude manier van css. Zo gebruik ik vaak float left of float right terwijl de nieuwe manier “display: flex” en “justify-content” gebruikt.
+    Daarnaast verplaatsen mijn UI elementen in de draaitabel wizard als een kolom te veel data bevat. Wat ik volgende keer anders zal doen is om niet alleen de back-end, maar ook het front-end van het systeem te analyseren.
+    Zo zal de front-end gedeelte consistent blijven met andere schermen. Verder zal ik me meer moeten inlezen in wat de nieuwe manieren zijn om css/scss toe te passen.
+    <br /><br />
+    Met de gekregen feedback van Paul zal ik in de laatste week (week 18) van mijn stage de front-end gedeelte van mijn code verbeteren.
+    Hierbij zal ik letten op hoe de andere schermen in elkaar zijn gezet door de scss files te bestuderen.
+    <br /><br />
+    Ik vind dat ik dit leerdoel heb behaald, omdat ik Blazor heb gebruikt om de rapportagetool te implementeren in bestaand systeem dat ontwikkeld is in MVC/Blazor.
+    Daarnaast heb ik Blazor gebruikt om de website van mijn portfolio op te zetten.
+    In de toekomst wil ik naast Blazor nog andere technologieën onderzoeken en uitproberen. 
+</p>

@@ -2,12 +2,81 @@
 @inject HttpClient Http
 
 <h1>Leerdoel 6 - Ontwerpen</h1>
-<p><i>Ik wil na afloop van mijn stage in staat zijn om een ontwerp op te stellen voor een database/datawarehouse.</i></p>
+<p><i>Ik wil na afloop van mijn stage in staat zijn om een ontwerp op te stellen voor een database.</i></p>
 
 <h3>Inleiding</h3>
-<h3>Bewijsmateriaal</h3>
-<h3>Feedback bedrijfsbegeleider</h3>
-<h3>Reflectie</h3>
+<p>
+    Ik wil na afloop van mijn stage in staat zijn om een ontwerp op te stellen voor een database/datawarehouse.
+    Achteraf bleek het niet nodig te zijn om een datawarehouse aan te maken en dus heb ik mijn leerdoel aangepast naar <i>Ik wil na afloop van mijn stage in staat zijn om een ontwerp op te stellen voor een database</i>.
+    In de afgelopen twee jaren op de opleiding heb ik geleerd hoe ik een ERD moet maken voor een database, maar weinig in praktijk toegepast.
+    Omdat ik meer wil oefenen met het opstellen van een ontwerp voor een database, heb ik besloten hier een leerdoel van te maken. 
+</p>
+<br />
+
+<h5><b>Werkwijze</b></h5>
+<p>
+    Om een ERD te maken, heb ik allereerst de database van het CRM geanalyseerd om te kijken hoe gegevens op het moment worden opgeslagen.
+    Hierbij heb ik gebruik gemaakt van Microsoft SQL Server Management Studio (SSMS). Dit is het programma dat het bedrijf gebruikt om de database te managen.
+    Mijn bedrijfsbegeleider heeft me uitgelegd hoe ik met behulp van SSMS een ERD kan maken van de bestaande tabellen.
+    Dankzij deze optie kon ik een overzicht krijgen van hoe de tabellen aan elkaar gerelateerd waren. 
+    <br /><br />
+    Na het analyseren van de database van het CRM, heb ik van mijn bedrijfsbegeleider en een collega twee boeken gekregen over SQL om te leren hoe tabellen ontworpen worden.
+    In Ontwerpen van tabellen wordt kort beschreven wat de stappen zijn die genomen moeten worden bij het ontwerpen.
+    <br /><br />
+    Na het analyseren van de database en het uitzoeken van waar op gelet moet worden bij het ontwerpen van tabellen, heb ik gegoogeld naar hoe andere mensen een ERD maken voor rapportages.
+    Met behulp van de gevonden ERD’s heb ik vervolgens zelf een ERD ontworpen (zie Bewijslast 1).
+    Uiteindelijk hebben mijn mede-stagiaire en ik onze ERD’s met elkaar vergeleken en samengevoegd.
+</p>
+<br />
+
+
+<h5><b>Bewijslast 1</b></h5>
+<p>
+    <div class="pdfviewer">
+        <embed src="pdf/ERD.pdf" style="height: 100vh; width: 90vw;"/>
+    </div>
+</p>
+<br />
+
+<h5><b>Feedback Paul op eerste ERD</b></h5>
+<p>
+    <i>
+    "Gezien de eerste ERD is de Permissions tabel inderdaad overkill.
+    Het enige wat hier bereikt wordt is het opslaan van namen in een apart tabel."
+    </i>
+</p>
+<br />
+
+<h5><b>Feedback bedrijfsbegeleider</b></h5>
+<p>
+    <i>
+    "Het ERD is niet first time right gemaakt. Bepaalde basiskennis was niet helemaal op orde toen je eraan begon.
+    Ik heb het gevoel dat je hier beter in bent geworden.
+    Net als bij het ontwerp leerdoel is het maken de waarde toevoegende activiteit."
+    </i>
+</p>
+<br />
+
+<h5><b>Reflectie</b></h5>
+<p>
+    Als feedback van mijn bedrijfsbegeleider heb ik gekregen dat in het begin bepaalde basiskennis niet helemaal in orde was toen ik eraan begon en mijn eerste ERD niet goed gemaakt is, maar dat ik hier beter in ben geworden. 
+    <br /><br />
+    Om mijn basiskennis bij te spijkeren heb ik het hoofdstuk Ontwerpen van tabellen in de SQL boek doorgenomen en de database van het CRM geanalyseerd.
+    Met de kennis die ik hiervan heb gekregen, heb ik vervolgens een eerste ERD gemaakt.
+    Echter was het de eerste keer niet meteen goed gemaakt en heb ik als tip van mijn bedrijfsbegeleider gekregen om te gaan googelen naar hoe anderen een ERD op hebben gesteld voor het opslaan van rapporten, schedulers en/of permissies.
+    Met de gevonden resultaten heb ik vervolgens mijn ERD bijgewerkt. Hierbij heb ik geleerd dat het goed is om de ERD van anderen mensen door te nemen, omdat velen al een model hebben bedacht voor dit vraagstuk dat vaak beter is dan wat ik als een beginner kan bedenken. 
+    <br /><br />
+    Tijdens het implementeren van de rapportagetool in het CRM-systeem ben ik achter wat fouten gekomen in mijn tabellen.
+    Zo heb ik als feedback van Paul gekregen dat de Permissions tabel een overkill is, omdat het enige wat hier bereikt wordt is het opslaan van namen in een apart tabel.
+    Van deze feedback heb ik geleerd dat ik beter moet nadenken of het wel nodig is om tabellen op te splitsen in nog kleinere tabellen.
+    Na het krijgen van deze feedback heb ik de Permissions tabel opnieuw bekeken en zag inderdaad dat het eigenlijk onnodig was om een Permissions tabel te hebben, want je slaat er alleen een naam in op wat ik ook meteen in de Role_Permissions tabel had kunnen zetten. 
+    <br /><br />
+    Na een andere meeting met de bedrijfsbegeleider bleek ook uiteindelijk dat het niet nodig is om een rol te hebben als permissies zelf los aangekruist kunnen worden.
+    Hierbij heb ik geleerd dat de Role tabel geen waarde heeft als een rol geen betekenis heeft. 
+    De permissies van elk gebruiker kunnen namelijk los geselecteerd worden. Met deze gekregen feedback heb ik de Role tabel verwijderd.
+    <br /><br />
+    In de toekomst zal ik waarschijnlijk niet meteen een ERD goed kunnen ontwerpen en moet ik eventuele fouten continu wijzigen, maar door juist meer ERD’s te maken in andere toekomstige projecten hoop ik fouten eerder te ontdekken. 
+</p>
 
 @code {
 

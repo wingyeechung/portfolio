@@ -26,7 +26,7 @@
     Bij het implementeren van de rapportagetool in het CRM heb ik allereerst geanalyseerd hoe hun structuur eruitziet.
     Door na te gaan hoe zij een bepaalde pagina hebben gebouwd en de functionaliteiten hebben geïmplementeerd, kon ik al snel een eigen pagina maken voor de rapportage framework.
     Blazor is component-based. Dit betekent dat websites gebouwd kunnen worden met losse herbruikbare componenten.
-    Dankzij de componenten die andere developers van Ranshuijsen BV gemaakt hebben, hoef ik niet zelf de lay-out van een pagina te maken en kon ik bijvoorbeeld al vrij makkelijk een pagina maken met een overzicht van gemaakte rapporten.
+    Dankzij de componenten die andere developers van Ranshuijsen BV gemaakt hebben, hoef ik niet zelf de lay-out van een pagina te maken en kon ik bijvoorbeeld al vrij makkelijk een pagina's en componenten maken (zie Bewijslast 1).
 </p>
 <br />
 
@@ -39,12 +39,14 @@
     <div>
         <img src="images/RapportageOverview.png" style="max-width: 80vw; height:auto;" />
     </div>
-   Hieronder zie je de wizard (UI) die ik voor de draaitabel heb gemaakt. Voor de wizard heb ik een nieuw component gemaakt.
+    <br />
+    <i>Hieronder zie je de wizard (UI) die ik voor de draaitabel heb gemaakt. Voor de wizard heb ik een nieuw component gemaakt.</i>
     <div>
         <img src="images/DraaitabelWizard.png" style="max-width: 80vw; height:auto;" />
     </div>
-    Hieronder zie je een overzicht van de datacontainers.
-    Voor deze permissies en containers pagina heb ik de layout gemaakt en eventcallbacks toegevoegd om data te selecteren.
+    <br />
+    <i>Hieronder zie je een overzicht van de datacontainers.
+    Voor deze permissies en containers pagina heb ik de layout gemaakt en eventcallbacks toegevoegd om data te selecteren.</i>
     <div>
         <img src="images/SelectContainers.png" style="max-width: 80vw; height:auto;" />
     </div>
@@ -75,18 +77,19 @@
 
 <h5><b>Reflectie</b></h5>
 <p>
-    Als feedback van Paul heb ik gekregen dat er goed is gekeken naar hoe de andere schermen werken, dat ik de bestaande Blazor componenten goed heb toegepast op de nieuwe onderdelen die door mij gemaakt zijn.
+    Als feedback van Paul heb ik gekregen dat er goed is gekeken naar hoe de andere schermen werken en dat ik de bestaande Blazor componenten goed heb toegepast op de nieuwe onderdelen die door mij zijn gemaakt.
     Potentiële verbeteringen zitten bij mij vooral in het UX en UI gedeelte.
     <br /><br />
     Van deze feedback heb ik geleerd dat niet alleen belangrijk is om de back-end van een systeem te analyseren, maar ook het front-end.
-    De manier waarmee ik mijn front-end in elkaar heb gezet is eigenlijk een oude manier van css. Zo gebruik ik vaak float left of float right terwijl de nieuwe manier “display: flex” en “justify-content” gebruikt.
-    Daarnaast verplaatsen mijn UI elementen in de draaitabel wizard als een kolom te veel data bevat. Wat ik volgende keer anders zal doen is om niet alleen de back-end, maar ook het front-end van het systeem te analyseren.
-    Zo zal de front-end gedeelte consistent blijven met andere schermen. Verder zal ik me meer moeten inlezen in wat de nieuwe manieren zijn om css/scss toe te passen.
+    De manier waarmee ik mijn front-end in elkaar heb gezet is eigenlijk een oude manier van css. Zo gebruik ik vaak float left of float right terwijl de nieuwe manier “display: flex” en “justify-content” gebruikt. 
+    Om dit in de toekomst anders aan te pakken zal ik eerst meer moeten inlezen in wat de nieuwe manieren zijn om css/scss toe te passen.
+    Wat ik volgende keer anders zal doen is om niet alleen de back-end, maar ook het front-end van het systeem te analyseren.
+    Zo zal de front-end gedeelte consistent blijven met de andere schermen. Een bekende fout die in de front-end is gevonden tijdens het testen met Hakan is dat de UI elementen in de draaitabel wizard verplaatsen van positie als een kolom te veel data bevat. 
     <br /><br />
     Met de gekregen feedback van Paul zal ik in de laatste week (week 18) van mijn stage de front-end gedeelte van mijn code verbeteren.
     Hierbij zal ik letten op hoe de andere schermen in elkaar zijn gezet door de scss files te bestuderen.
     <br /><br />
     Ik vind dat ik dit leerdoel heb behaald, omdat ik Blazor heb gebruikt om de rapportagetool te implementeren in bestaand systeem dat ontwikkeld is in MVC/Blazor.
-    Daarnaast heb ik Blazor gebruikt om de website van mijn portfolio op te zetten.
-    In de toekomst wil ik naast Blazor nog andere technologieën onderzoeken en uitproberen. 
+    Daarnaast heb ik Blazor gebruikt om de website van mijn portfolio op te zetten. Het is een erg fijn manier om websites mee te bouwen, omdat ik geen JavaScript hoef te schrijven.
+    Daarnaast voorkom ik code herhaling dankzij de Blazor componenten. In de toekomst wil ik naast Blazor nog andere technologieën onderzoeken en uitproberen. 
 </p>
